@@ -5,6 +5,10 @@ import XCallback
 public struct SchemeClient {
   public var run: (String) -> Result<String, Error>
 
+  public init(run: @escaping (String) -> Result<String, Error>) {
+    self.run = run
+  }
+
   public struct Error: Swift.Error, Equatable {
     public let underlying: Swift.Error
 
