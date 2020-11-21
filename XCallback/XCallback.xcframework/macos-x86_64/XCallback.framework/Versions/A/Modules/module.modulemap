@@ -1,0 +1,4 @@
+framework module XCallback {
+  header "XCallback-Swift.h"
+  requires objc
+}
