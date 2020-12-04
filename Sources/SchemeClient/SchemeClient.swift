@@ -16,6 +16,10 @@ public struct SchemeClient {
       self.underlying = underlying
     }
 
+    public var description: String {
+      return (underlying as NSError).localizedDescription
+    }
+
     public static func == (lhs: SchemeClient.Error, rhs: SchemeClient.Error) -> Bool {
       lhs.underlying as NSError == rhs.underlying as NSError
     }
